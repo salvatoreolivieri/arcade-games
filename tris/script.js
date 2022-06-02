@@ -48,8 +48,12 @@ for (let x = 0; x < cells.length; x++) {
 
     if(hasWon){
       console.log(sign, "ha vinto");
+      showAlert(`${sign} ha vinto`)
+
     } else if (turn === 9){
       console.log("Pareggio");
+      showAlert(`Pareggio`)
+
     }
 
   })
@@ -81,11 +85,29 @@ function checkVictory(){
 
     if(cellSign[a] && cellSign[a] === cellSign[b] && cellSign[b] === cellSign[c]){
       console.log("trovata combinazione vincente", a, b, c);
-      return true
+      return true;
     }
   }
 
-  return false
+  return false;
+
+}
+
+
+
+//4. Modal per annunciare vittoria-sconfitta-pareggio
+
+function showAlert(message){
+
+  const gameArea = document.querySelector('.game-area');
+
+  const alertMessage = `
+  <div class="game-alert">
+    <div class="game-alert-message">${message}</div>
+  </div>
+  `;
+
+  gameArea.innerHTML = gameArea.innerHTML + alertMessage;
 
 }
 

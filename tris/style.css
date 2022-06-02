@@ -11,13 +11,14 @@ main{
   align-items: center;
 }
 
-.grid-wrapper{
+.game-area{
   display: flex;
   justify-content: start;
   align-items: center;
 
   width: 80%;
   margin: 0 auto;
+  position: relative;
 }
 
 .grid{
@@ -47,5 +48,30 @@ main{
 
   font-size: 50px;
 
+  cursor: pointer;
+}
+
+.game-alert{
+  position: absolute;
+  top: -180px;
+  left:-20px;
+  right: 0;
+  bottom:0;
+
+  width: 400px;
+  height: 150px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--accent-color);
+
+  font-size: 20px;
+}
+
+a{
   cursor: pointer;
 }
