@@ -1,0 +1,107 @@
+:root{
+  --bg-color: #3535ec;
+  --accent-color: #f70d68;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+}
+
+body{
+  background-color: var(--bg-color);
+}
+
+header{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  margin-left: 30px;
+
+  height: 50px;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 500px;
+
+  text-align: center;
+  
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+h1{
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+i{
+  color: var(--accent-color);
+}
+
+p{
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.img-container{
+  width: 600px;
+}
+
+img{
+  width: 100%;
+}
+
+li{
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+a{
+  text-decoration: none;
+  font-size: 20px;
+}
+
+a:hover{
+  color: var(--accent-color);
+}
+
+.button{
+  border: 1px solid white;
+  padding: 10px 20px;
+  box-shadow: 2px 1px 5px 1px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.button:focus{
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
