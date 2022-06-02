@@ -52,3 +52,28 @@ main{
 .tiktac{
   background-image: url("images/tiktac.png");
 }
+
+.game-area{
+  position: relative;
+}
+
+.game-alert{
+  position: absolute;
+  top: -220px;
+  left:-20px;
+  right: 0;
+  bottom:0;
+
+  width: 400px;
+  height: 150px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--accent-color);
+
+  font-size: 20px;
+}

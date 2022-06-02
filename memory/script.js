@@ -15,6 +15,14 @@ const grid = document.querySelector(".grid");
 const cards = ['alien', 'bug', 'duck', 'rocket', 'spaceship', 'tiktac'];
 const deck = [...cards, ...cards];
 
+let errorsCount = 0
+
+const errorDom = document.getElementById("error")
+errorDom.innerHTML = errorsCount
+
+let check = []
+let cardMathed = []
+
 
 // 1. Creare le card dinamicamente
 
@@ -24,6 +32,8 @@ for (let x = 0; x < deck.length; x++) {
   const cardName = deck[x]
   card.classList.add("card")
 
+  // 2. Associare randomicamente un data-name alla card che corrisponde alla sua background image
+
   card.setAttribute("data-name", cardName)
   card.addEventListener("click", flipCard)
 
@@ -31,8 +41,13 @@ for (let x = 0; x < deck.length; x++) {
 
 }
 
+
+// 3. Dare la classe uguale al data-name
+
 function flipCard(event){
   const card = event.target
+
+  console.log(event.target);
 
   if (card.classList.contains("flipped")) {
     return
@@ -40,7 +55,59 @@ function flipCard(event){
 
   card.classList.add(card.getAttribute("data-name"), "flipped")
 
+  check.push(card)
 
+  if (check.length === 2) {
+    findMatch()
+  }
+
+}
+
+
+function findMatch(card) {
+
+  const card1 = check[0]
+  const card2 = check[1]
+  const cardName1 = card1.getAttribute("data-name")
+  const cardName2 = card2.getAttribute("data-name")
+
+  if (cardName1 === cardName2) {
+    console.log("hai fatto match");
+    cardMathed.push("card1")
+    cardMathed.push("card2")
+
+    console.log(cardMathed);
+
+    if (cardMathed.length === deck.length ) {
+      checkVictory()
+    }
+
+  } else {
+    setTimeout(() => {
+      card1.classList.remove(card1.getAttribute("data-name"), "flipped")
+      card2.classList.remove(card2.getAttribute("data-name"), "flipped")
+      errorsCount++
+      error.innerHTML = errorsCount
+
+    }, 500);
+  }
+
+  check = []
+}
+
+function checkVictory() {
+  console.log('hai vinto');
+
+    const gameArea = document.querySelector('.game-area');
+  
+    const alertMessage = `
+    <div class="game-alert">
+      <div class="game-alert-message">Hai vinto</div>
+    </div>
+    `;
+  
+    gameArea.innerHTML = gameArea.innerHTML + alertMessage;
+  
 }
 
 
