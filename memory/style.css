@@ -1,3 +1,6 @@
+:root{
+  --card-size: 150px;
+}
 
 main{
   height: calc( 100vh - 50px);
@@ -5,4 +8,47 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.grid{
+  width: calc( var(--card-size)  * 4 );
+  height: calc( var(--card-size) * 3 );
+
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.card{
+  width: var(--card-size);
+  height: var(--card-size);
+
+  cursor: pointer;
+
+  background-image: url("images/back.png");
+  background-size: contain;
+}
+
+.alien{
+  background-image: url("images/alien.png");
+}
+
+.bug{
+  background-image: url("images/bug.png");
+}
+
+.duck{
+  background-image: url("images/duck.png");
+}
+
+.rocket{
+  background-image: url("images/rocket.png");
+}
+
+.spaceship{
+  background-image: url("images/spaceship.png");
+}
+
+.tiktac{
+  background-image: url("images/tiktac.png");
 }

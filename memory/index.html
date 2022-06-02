@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="shortcut icon" href="../common/logo.png" type="image/x-icon">
+
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css' integrity='sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ==' crossorigin='anonymous'/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,19 +31,21 @@
 
       <h1>Memory</h1>
       <p>Abbina tutti i simboli uguali e scopri tutte le carte.</p>
-      <p>Errors: 0</p>
+      <p style="margin: 0;">Errors: <span id="error"></span></p>
 
     </div>
 
     <div class="grid-wrapper">
-
+      <div class="grid">
+      </div>
     </div>
 
     <div style="margin-top: 30px;" class="wrapper">
-      <a class="button" href="/memory/index.html">Rigioca</a>
+      <a class="button" href="/memory/">Rigioca</a>
     </div>
 
   </main>
-  
+
+  <script src="script.js"></script>
 </body>
 </html>
