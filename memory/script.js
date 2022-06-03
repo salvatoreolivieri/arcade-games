@@ -19,6 +19,10 @@ const replayButton = document.querySelector(".button")
 
 let errorsCount = 0
 
+deck.sort(function() {
+  return 0.5 - Math.random();
+});
+
 const errorDom = document.getElementById("error")
 errorDom.innerHTML = errorsCount
 
@@ -49,7 +53,7 @@ for (let x = 0; x < deck.length; x++) {
 function flipCard(event){
   const card = event.target
 
-  console.log(event.target);
+  // console.log(event.target);
 
   if (card.classList.contains("flipped")) {
     return
@@ -74,11 +78,11 @@ function findMatch(card) {
   const cardName2 = card2.getAttribute("data-name")
 
   if (cardName1 === cardName2) {
-    console.log("hai fatto match");
+    // console.log("hai fatto match");
     cardMathed.push("card1")
     cardMathed.push("card2")
 
-    console.log(cardMathed);
+    // console.log(cardMathed);
 
     if (cardMathed.length === deck.length ) {
       checkVictory()
@@ -99,7 +103,7 @@ function findMatch(card) {
 }
 
 function checkVictory() {
-  console.log('hai vinto');
+  // console.log('hai vinto');
 
     const gameArea = document.querySelector('.game-area');
   
