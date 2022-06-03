@@ -1,0 +1,102 @@
+:root{
+  --bg-color: #3535ec;
+  --accent-color: #f70d68;
+  --road-size: 60px;
+}
+
+main{
+  height: calc( 100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-area{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cell{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 120px;
+  height: 120px;
+
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  background-color: white;
+
+  font-size: 50px;
+
+  cursor: pointer;
+}
+
+.game-alert{
+  position: absolute;
+  top: 0px;
+  left:-20px;
+  right: 0;
+  bottom:0;
+
+  width: 400px;
+  height: 150px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--accent-color);
+
+  font-size: 20px;
+}
+
+a{
+  cursor: pointer;
+}
+
+.display-none{
+  display: none;
+}
+
+#grid {
+  width: calc(var(--road-size) * 10);
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 3px solid white;
+}
+
+#grid > div {
+  width: var(--road-size);
+  height: var(--road-size);
+}
+
+.duck {
+  background-image: url('./img/duck.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;  
+  transition: transform 0.3s;  
+}
+
+.duck-jump {
+  transform: translate(0, -120%);
+}
+
+.plant:not(.duck) {
+  background-image: url('./img/plant.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;    
+}

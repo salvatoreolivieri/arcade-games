@@ -1,0 +1,18 @@
+canvas {
+  border: 1px solid white;
+}
+
+.game-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+  height: calc( 100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

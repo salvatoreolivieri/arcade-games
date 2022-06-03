@@ -14,32 +14,50 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/common/style.css">
-  <link rel="stylesheet" href="/snake/style.css">
+  <link rel="stylesheet" href="/running-duck/style.css">
 
-  <title>Snake</title>
+  <title>Running Duck</title>
 </head>
 <body>
 
   <header>
     <i style="font-size: 8px; margin-right: 8px;" class="fa-solid fa-chevron-left"></i>
-    <a style="font-size: 12px; color: hsl(337, 94%, 51%); text-decoration: underline;" href="/">Cambia Gioco</a>
+    <a style="font-size: 12px; color: #f70d68; text-decoration: underline;" href="/">Cambia Gioco</a>
   </header>
 
   <main>
 
-    <div class="wrapper">
+    <div class="board">
 
-      <h1>Snake</h1>
-      <p style="margin-bottom: 25px;">Mangia le mele e fai crescere il serpente. Attento a non morderti da solo!</p>
-
+      <div style="width: 700px;" class="wrapper">
+  
+        <h1>Running Duck</h1>
+        <p>Premi SPAZIO per saltare e evita le piante!</p>
+  
+        <span id="score" style="margin-bottom: 30px;">Score: 30</span>
+  
+  
+      </div>
+  
+      <div class="game-area">
+        <div id="grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
+  
+      <div style="margin-top: 50px; height: 30px;" class="wrapper">
+        <a id="replay-button"  class="button display-none" href="/running-duck/" >Replay</a>
+      </div>
 
-    <div class="game-area">
-      <canvas width="400" height="400" id="game"></canvas>
-    </div>
-
-    <div style="margin-top: 30px; height: 30px;" class="wrapper">
-      <a id="replay-button"  class="button display-none" href="/tris/" >Replay</a>
     </div>
 
   </main>

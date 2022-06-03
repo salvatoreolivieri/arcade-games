@@ -14,33 +14,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/common/style.css">
-  <link rel="stylesheet" href="/snake/style.css">
+  <link rel="stylesheet" href="/space-invaders/style.css">
 
-  <title>Snake</title>
+  <title>Space Invaders</title>
 </head>
 <body>
 
   <header>
     <i style="font-size: 8px; margin-right: 8px;" class="fa-solid fa-chevron-left"></i>
-    <a style="font-size: 12px; color: hsl(337, 94%, 51%); text-decoration: underline;" href="/">Cambia Gioco</a>
+    <a style="font-size: 12px; color: #f70d68; text-decoration: underline;" href="/">Cambia Gioco</a>
   </header>
 
   <main>
 
-    <div class="wrapper">
+    <div style="width: 710px;" class="wrapper">
 
-      <h1>Snake</h1>
-      <p style="margin-bottom: 25px;">Mangia le mele e fai crescere il serpente. Attento a non morderti da solo!</p>
+      <h1>Space Invaders</h1>
+      <p>Premi i tasti ← e → per muovere l'astronave. SPAZIO per sparare agli alieni!</p>
+
+      <span id="score" style="margin-bottom: 30px;"></span>
 
     </div>
 
     <div class="game-area">
-      <canvas width="400" height="400" id="game"></canvas>
+      <div id="grid"></div>
     </div>
 
     <div style="margin-top: 30px; height: 30px;" class="wrapper">
-      <a id="replay-button"  class="button display-none" href="/tris/" >Replay</a>
+      <a id="replay-button"  class="button display-none" href="/space-invaders/" >Replay</a>
     </div>
+
 
   </main>
 
