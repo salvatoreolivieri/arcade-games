@@ -96,7 +96,7 @@ function findMatch(card) {
       replayButton.classList.remove("display-none")
       error.innerHTML = errorsCount
 
-    }, 500);
+    }, 1000);
   }
 
   check = []
