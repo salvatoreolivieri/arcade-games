@@ -15,6 +15,8 @@ const grid = document.querySelector(".grid");
 const cards = ['alien', 'bug', 'duck', 'rocket', 'spaceship', 'tiktac'];
 const deck = [...cards, ...cards];
 
+const replayButton = document.querySelector(".button")
+
 let errorsCount = 0
 
 const errorDom = document.getElementById("error")
@@ -87,6 +89,7 @@ function findMatch(card) {
       card1.classList.remove(card1.getAttribute("data-name"), "flipped")
       card2.classList.remove(card2.getAttribute("data-name"), "flipped")
       errorsCount++
+      replayButton.classList.remove("display-none")
       error.innerHTML = errorsCount
 
     }, 500);

@@ -12,6 +12,7 @@
 // 1. Al click aggiungere X oppure O
 
 const cells = document.querySelectorAll(".cell");
+const replayButton = document.getElementById('replay-button')
 
 const cellSign = [];
 
@@ -32,6 +33,10 @@ for (let x = 0; x < cells.length; x++) {
     }
 
     turn++;
+
+    if (turn > 0) {
+      replayButton.classList.remove("display-none")
+    }
 
     let sign;
 

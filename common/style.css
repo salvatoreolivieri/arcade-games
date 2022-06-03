@@ -36,7 +36,7 @@ header{
   text-align: center;
   
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 h1{
@@ -104,4 +104,8 @@ a:hover{
   -moz-transform: scale(0.9);
   -ms-transform: scale(0.9);
   -o-transform: scale(0.9);
+}
+
+.display-none{
+  display: none;
 }
